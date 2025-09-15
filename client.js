@@ -1,23 +1,20 @@
 /* global TrelloPowerUp */
 
-// Power-Up özelliklerini başlatıyoruz
 TrelloPowerUp.initialize({
-
-  // Kart arkasına eklenecek buton
-  'card-buttons': function(t, options){
+  "board-buttons": function(t, options){
     return [{
-      icon: 'https://cdn-icons-png.flaticon.com/512/25/25694.png', // İkon
-      text: 'Görev Detay', // Buton adı
+      text: "Sort This Week Cards",
       callback: function(t){
-        // Butona tıklandığında popup açılır
-        return t.popup({
-          title: 'Görev Detayları',
-          url: 'popup.html', // Popup içeriği
-          height: 150
-        });
+        return sortThisWeekCards(t);
       }
     }];
-  },
-
+  }
 });
 
+function sortThisWeekCards(t){
+  // 1. "Bu Hafta" listesindeki tüm kartları çek
+  // 2. Her kartın due date'ini kontrol et
+  // 3. Gün listesine taşı (Pzt, Sal, Çar, ...)
+  console.log("Sort işlemi başlatıldı!"); // şimdilik test için
+  return t.alert({message: "Sort işlemi başlatıldı!"});
+}
