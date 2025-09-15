@@ -1,0 +1,8 @@
+{
+  "name": "Weekly Card Organizer",
+  "id": "weekly-card-organizer",
+  "description": "Moves cards from 'Bu Hafta' list to the list corresponding to their due date.",
+  "author": "Your Name",
+  "version": "1.0",
+  "capabilities": ["board-buttons"]
+}
