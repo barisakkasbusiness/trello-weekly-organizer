@@ -1,19 +1,23 @@
 /* global TrelloPowerUp */
 
+// Power-Up özelliklerini başlatıyoruz
 TrelloPowerUp.initialize({
-  'board-buttons': function(t, options) {
+
+  // Kart arkasına eklenecek buton
+  'card-buttons': function(t, options){
     return [{
-      icon: 'https://cdn-icons-png.flaticon.com/512/61/61456.png', // optional
-      text: 'Organize This Week',
-      callback: function(t) {
-        // for now, just show an alert
-        alert('Button works!');
+      icon: 'https://cdn-icons-png.flaticon.com/512/25/25694.png', // İkon
+      text: 'Görev Detay', // Buton adı
+      callback: function(t){
+        // Butona tıklandığında popup açılır
         return t.popup({
-          title: 'Organize Cards',
-          url: 'moveCards.html',  // we’ll create this later
-          height: 200
+          title: 'Görev Detayları',
+          url: 'popup.html', // Popup içeriği
+          height: 150
         });
       }
     }];
-  }
+  },
+
 });
+
